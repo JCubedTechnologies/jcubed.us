@@ -1,0 +1,9 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www\.jcubed\.us [NC]
+RewriteRule ^(.*) http://jcubed.us/$1 [L,R=301]
+
+RewriteCond %{THE_REQUEST} index\.html
+RewriteRule ^index\.html$ http://justicesuh\.com/ [R=301,L]
